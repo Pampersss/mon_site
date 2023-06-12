@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Mon profil
+{% endblock %}
+
+{% block body %}
+    <div class="text_color col-12 ">
+
+        <div class="enTete">
+            <h1><u>Développeur Web</u></h1>
+            <h2>Robert Gélinot</h2>
+            <img class="link_photo" src="{{ asset('image/1614933537311.jpg') }}" alt="moi">
+        </div>
+        <div class="textCentre text-center col-8 offset-2">
+            <p>Je vais vous expliquer comment j'en suis arrivé à devenir développeur Web.</p>
+
+            <p>
+                J'avais plusieurs métiers en tête quand j'étais plus jeune, j'adorais la menuiserie, la pâtisserie et
+                l'informatique.<br>
+                J'ai décidé de m'orienter vers le métier de pâtissier qui était mon métier de coeur.<br><br>
+                Après mon diplôme je me suis rendu compte que ce n'était pas le métier que je voulais faire. <br>
+                je me suis mis à travailler en intérim pour explorer d'autres pistes.
+                Au fil des années, je me suis intéressé de plus en plus à l'informatique. Je voulais comprendre comment
+                cela fonctionne.
+                <br><br>
+                L'année dernière, en discutant avec ma conseillère de pôle emploi, je lui ai exposé mon projet,
+                elle m'a fait part d'une formation certifiante en tant que développeur Web et Web mobile.
+                Ni une ni deux j'ai sauté sur l'occasion et j'ai suivi le programme qui se déroulait sur 8 mois à
+                l'école
+                <a class="bg-light " target="_blank" href="https://www.eni-ecole.fr/"> Eni informatique.</a><br><br>
+                Après 6 mois intensifs de formation théorique et 2 mois de stage en entreprise, que j'ai fait au sein de
+                la
+                <a class="bg-light " target="_blank" href="https://toulon.fr/"> la mairie de Toulon,</a> au département
+                des services numériques.
+                J'ai obtenu mon titre de développeur Web et Web mobile (RNCP31114 équivalent à un bac+2).<br>
+
+            </p>
+            <div class="border border-dark">
+                <div class="text-center bg-opacity-10 ">
+                    <p> Si vous le voulez bien, </p>
+                    <p>merci de bien vouloir remplir ce formulaire.</p>
+                    <p><i>Ce n'est pas une obligation</i></p>
+
+                </div>
+            </div>
+            <div class="d-flex justify-content-center ">
+
+                {{ form_start(newEntreprise) }}
+                <div class="form col-12  ">
+                    <div class="form col-12 position-relative text-center ">
+
+                        {{ form_label(newEntreprise.Nom) }}
+                        {{ form_widget(newEntreprise.Nom) }}
+                        <div class="error">
+                            {{ form_errors(newEntreprise.Nom) }}
+                        </div>
+                        {{ form_label(newEntreprise.Contact) }}
+                        {{ form_widget(newEntreprise.Contact) }}
+                        <div class="error">
+                            {{ form_errors(newEntreprise.Contact) }}
+                        </div>
+                        {{ form_label(newEntreprise.Telephone) }}
+                        {{ form_widget(newEntreprise.Telephone) }}
+                        <div class="error">
+                            {{ form_errors(newEntreprise.Telephone) }}
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="form_end d-flex justify-content-around ">
+                    {{ form_row(newEntreprise.enregistrer) }}
+                </div>
+                {{ form_end(newEntreprise) }}
+            </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}

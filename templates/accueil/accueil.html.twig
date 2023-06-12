@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Accueil
+{% endblock %}
+
+{% block body %}
+    <div>
+
+        <h1 class="text-center bg-opacity-10">Bonjour et bienvenu cher visiteur(s)</h1><br>
+
+        <div class="text-center bg-opacity-10 ">
+            <p> Si vous le voulez bien, </p>
+            <p>merci de bien vouloir remplir ce formulaire.</p>
+            <p><i>Ce n'est pas une obligation</i></p>
+
+        </div>
+    </div>
+    <div class="d-flex justify-content-center ">
+
+        {{ form_start(newEntreprise) }}
+        <div class="form col-12  ">
+            <div class="form col-12 position-relative text-center">
+
+                {{ form_label(newEntreprise.Nom) }}
+                {{ form_widget(newEntreprise.Nom) }}
+                <div class="error">
+                    {{ form_errors(newEntreprise.Nom) }}
+                </div>
+                {{ form_label(newEntreprise.Contact) }}
+                {{ form_widget(newEntreprise.Contact) }}
+                <div class="error">
+                    {{ form_errors(newEntreprise.Contact) }}
+                </div>
+                {{ form_label(newEntreprise.Telephone) }}
+                {{ form_widget(newEntreprise.Telephone) }}
+                <div class="error">
+                    {{ form_errors(newEntreprise.Telephone) }}
+                </div>
+
+            </div>
+
+        </div>
+        <div class="d-flex justify-content-around">
+            {{ form_row(newEntreprise.enregistrer) }}
+        </div>
+        {{ form_end(newEntreprise) }}
+    </div>
+
+
+{% endblock %}

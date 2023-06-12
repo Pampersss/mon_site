@@ -1,0 +1,118 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Mes expériences
+{% endblock %}
+
+{% block body %}
+    <div class="containerMP container text-center">
+        <div class="row justify-content-md-center">
+            <!-- on est dans la présentation gauche du CV  -->
+            <div class="colG col-lg-2">
+
+                <img class="link_photo" src="{{ asset('image/1614933537311.jpg') }}" alt="moi">
+
+
+                <p>Robert GELINOT <br>
+                    36 ans <br>
+                    Français <br>
+                    Permis A et Permis B <br>
+                    Véhicule personnel <br>
+                    En concubinage avec enfants <br>
+                    Télétravail ou présentiel <br>
+
+                <h5 class="Ptitre"><strong>Langues</strong></h5>
+                <strong>Français</strong><br>
+                Langue maternelle <br>
+                <strong>Anglais</strong><br>
+                Technique <br><br>
+
+                <h5 class="Ptitre"><strong>Atouts</strong></h5>
+                <strong>Force de proposition</strong><br>
+                <strong>L’implication</strong><br>
+                <strong>La curiosité</strong><br>
+                <strong>L'esprit d'équipe.</strong><br><br>
+
+                <h5 class="Ptitre"><strong>Centres d'intérêt</strong></h5>
+                <strong>L'impression 3D</strong><br>
+                <strong>informatique</strong><br>
+                <strong>moto</strong><br>
+                <strong>réalité virtuelle</strong><br><br>
+
+                <h5 class="Ptitre"><strong>Réseaux sociaux</strong></h5>
+                <strong>Linkedin </strong><br>www.linkedin.com/in/robert-gelinot<br>
+
+                </p>
+
+            </div>
+            <div class="col-md-auto">
+                <!-- on est dans la présentation central du CV  -->
+                <h1><u>Mes expériences</u></h1>
+                <hr>
+                <hr>
+                <h3><u>Diplôme et Formation</u></h3>
+                <p>Développeur Web et Web mobile <br><i>Mai 2022 à Décembre 2022 <a class="bg-light " target="_blank"
+                                                                                    href="https://www.eni-ecole.fr/">Eni
+                            Ecole informatique</a> Nantes</i>
+                    <br>Titre <i>RNCP31114</i> de niveau V /bac+2</p>
+                <p>Pâtissier <br><i>Septembre 2003 à Juin 2005 <a class="bg-light " target="_blank"
+                                                                  href="https://www.facebook.com/@Bureau-des-Apprentis-CFA-du-Beausset-100070893609311/?paipv=0&eav=AfYFM29Zlb49g0Ee8vABRHRx3-HF4MjEAb9WqdE-_dHb6AEbeWKbCsPd5bh9fJGUCy4&_rdr">CFA
+                            du beausset</a> Le beausset </i></p>
+                <hr>
+                <hr>
+                <h3><u>Compétences informatique</u></h3><br>
+                <p><strong>Langages</strong> <i>JAVA, PHP, PL/SQL, HTML, CSS, JAVASCRIPT</i></p>
+                <p><strong>Environnements </strong><i>Eclipse, PHP Storm, Web Storm, Andoid Studio</i></p>
+                <p><strong>Plateformes / Framework </strong><i>Java SE et EE (Tomcat), Symfony (WAMP ou LAMP), mobile
+                        sur la plateforme Android,Bootstrap</i></p>
+                <p>
+                    <strong>Bases de données </strong><i>SQL Server, Oracle, MySQL</i>
+                </p>
+                <hr>
+                <hr>
+
+                <h3><u>Expériences professionnelles</u></h3><br>
+                <p><strong>Stagiaire développeur web</strong> <br><i>D'octobre 2022 à décembre 2022 <a class="bg-light "
+                                                                                                       target="_blank"
+                                                                                                       href="https://toulon.fr/">la
+                            mairie de Toulon</a> Toulon </i>
+                    <br>Titre <i>RNCP31114</i> de niveau V /bac+2</p>
+                <p>
+                    <strong>Projets informatiques développés à l’ENI Ecole Informatique</strong> <br>
+                    <i>2022 Ecole ENI Distanciel</i><br>
+                    <i>Développement d’un site d’enchères sous Java EE et SQL Server: application weborganisée en
+                        couches.</i><br>
+                    <i>Développement d’un site internet d’organisation de sorties entre élèves avec PHP, Symfony et
+                        MySQL.</i>
+                </p>
+                <p><strong>Technico Commercial </strong><br><i>De mars 2021 à janvier 2022 Gentel Global Solution La
+                        Valette du Var</i></p>
+                <p><strong>Conseiller Vendeur </strong><br><i>D'avril 2018 à Juin 2020 Sénéquier</i> La valette du Var
+                </p>
+                <p><strong>Chauffeur Livreur </strong><br><i>D'avril 2017 à avril 2018 PACA 83 </i> La Garde</p>
+                <p><strong>Employé Polyvalent </strong><br><i>D'avril 2016 à avril 2017 Brico Dépot </i>Toulon </p>
+                <p><strong>Conseiller Vendeur </strong><br><i>De janvier 2015 à janvier 2016 Botanic </i>La Seyne Sur
+                    Mer </p>
+                <p><strong>Conseiller Vendeur </strong><br><i>De janvier 2013 à décembre 2014 Mr Bricolage</i> Le Pradet
+                </p>
+                <p><strong>Conseiller Vendeur </strong><br><i>De mars 2011 à octobre 2011 Castorama </i>La Seyne Sur Mer
+                </p>
+                <p><strong>Cariste Commercial </strong><br><i>De janvier 2008 à avril 2010 Costamagna </i> Le Beausset
+                </p>
+            </div>
+            <div class="colD col-lg-2">
+                <img class="link_logo" src="{{ asset('image/PHP-logo.svg.png') }}" alt="logo php">
+                <img class="link_logo" src="{{ asset('image/css.svg.png') }}" alt="logo css">
+                <img class="link_logo" src="{{ asset('image/HTML5_logo.svg.png') }}" alt="logo html">
+                <img class="link_logo" src="{{ asset('image/Logo-SQL.png') }}" alt="logo sql">
+                <img class="link_logo" src="{{ asset('image/Java_Logo.svg.png') }}" alt="logo java">
+                <img class="link_logo" src="{{ asset('image/JavaScript-Logo.png') }}" alt="logo javascript">
+            </div>
+        </div>
+    </div>
+    <!-- on est dans la présentation central du CV  -->
+
+
+    <!-- on est dans la présentation gauche du CV  -->
+
+{% endblock %}
