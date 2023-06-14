@@ -6,43 +6,50 @@
 
 {% block body %}
     <div class="text-center col-12  fs-4 text">
-    <h1>Formulaire de contact</h1>
-    <p>Vous souhaitez me contacter, merci de remplir ce formulaire</p>
+        <h1>Formulaire de contact</h1>
+        <p>Vous souhaitez me contacter, merci de remplir ce formulaire</p>
 
-    <div class="d-flex justify-content-center ">
-        {{ form_start(newContact) }}
+        <div class="d-flex justify-content-center ">
+            {{ form_start(newContact) }}
 
-        <div class="form col-8 offset-2  ">
-            <div class="form col-12 position-relative text-center ">
+            <div class="form col-8 offset-2  ">
+                <div class="form col-12 position-relative text-center ">
 
 
-                {{ form_label(newContact.fullName) }}
-                {{ form_widget(newContact.fullName) }}
-                <div class="error">
-                    {{ form_errors(newContact.fullName) }}
-
-                    {{ form_label(newContact.email) }}
-                    {{ form_widget(newContact.email) }}
+                    {{ form_label(newContact.fullName) }}
+                    {{ form_widget(newContact.fullName) }}
                     <div class="error">
-                        {{ form_errors(newContact.email) }}
-
-                        {{ form_label(newContact.subject) }}
-                        {{ form_widget(newContact.subject) }}
+                        {{ form_errors(newContact.fullName) }}
+                    </div>
+                        {{ form_label(newContact.email) }}
+                        {{ form_widget(newContact.email) }}
                         <div class="error">
-                            {{ form_errors(newContact.subject) }}
-
-                            {{ form_label(newContact.message) }}
-                            {{ form_widget(newContact.message) }}
-                            <div class="error">
-                                {{ form_errors(newContact.message) }}
-                            </div>
+                            {{ form_errors(newContact.email) }}
                         </div>
+                            {{ form_label(newContact.subject) }}
+                            {{ form_widget(newContact.subject) }}
+                            <div class="error">
+                                {{ form_errors(newContact.subject) }}
+                            </div>
+                                {{ form_label(newContact.message) }}
+                                {{ form_widget(newContact.message) }}
+                                <div class="error">
+                                    {{ form_errors(newContact.message) }}
+                                </div>
+                    {{ form_label(newContact.createdAT) }}
+                    {{ form_widget(newContact.createdAT) }}
+                    <div class="error">
+                        {{ form_errors(newContact.createdAT) }}
+                    </div>
+
+                    <div class="d-flex justify-content-around">
+                            {{ form_row(newContact.enregistrer) }}
                     </div>
                     {{ form_end(newContact) }}
 
                 </div>
-    </div>
-    </div>
+            </div>
+        </div>
     </div>
     </div>
 
