@@ -2,8 +2,11 @@
 
 namespace App\Controller;
 
+use App\Entity\Contact;
 use App\Entity\Entreprise;
+use App\Form\ContactType;
 use App\Form\EntrepriseType;
+use App\Repository\ContactRepository;
 use App\Repository\EntrepriseRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -44,9 +47,22 @@ class MainController extends AbstractController
 
     // redirection de page
     #[Route('/contact', name: 'app_contact')]
-    public function contact(Request $request): Response
+    public function contact(Request $request,EntityManagerInterface $entityManager,
+                            ContactRepository $contactRepository): Response
     {
-        return $this->render('monProfil/contact.html.twig');
+        $newContact = new  Contact();
+
+        $newContactForm = $this->createForm( ContactType::class, $newContact);
+        $newContactForm-> handleRequest($request);
+
+        if ($newContactForm->isSubmitted()&&$newContactForm->isValid()){
+            $entityManager->persist($newContact);
+            $entityManager->flush();
+            return $this->redirectToRoute('app_monProfil');
+        }
+        return $this->render('monProfil/contact.html.twig',[
+            'newContact' =>$newContactForm->createView()
+        ]);
     }
 
 
